@@ -1,0 +1,29 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Weight Converter</title>
+</head>
+<body>
+	<style type="text/css">
+		body{
+			background-color: lavenderblush;
+		}
+	</style>
+<h1>Weight Converter</h1>
+<p>Grams To Kilograms</p>
+
+<p>
+  <label>Grams</label>
+  <input id="inputGrams" type="number" placeholder="Grams" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+</p>
+<p>Kilograms: <span id="outputKilograms"></span></p>
+
+<script type="text/javascript">
+function weightConverter(valNum) {
+  document.getElementById("outputKilograms").innerHTML=valNum/1000;
+}
+</script>
+</body>
+</html>
